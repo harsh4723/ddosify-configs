@@ -1,0 +1,37 @@
+{
+  "iteration_count": 9999,
+  "duration": 60,
+  "load_type": "waved",
+  "env": {
+    "baseUrl": "http://internal-a28503a22239d48d3b5a8bd01dc06611-1712404486.us-east-1.elb.amazonaws.com/"
+  },
+  "data": {
+    "transactions": {
+      "path": "./jeromes_uids.csv",
+      "vars": {
+        "0": {
+          "tag": "user_id"
+        },
+        "2": {
+          "tag": "f0_"
+        }
+      },
+      "delimiter": ",",
+      "allow_quota": false,
+      "order": "random",
+      "skip_first_line": true,
+      "skip_empty_line": true
+    }
+  },
+  "steps": [
+    {
+      "id": 1,
+      "name": "affinity",
+      "url": "http://internal-a28503a22239d48d3b5a8bd01dc06611-1712404486.us-east-1.elb.amazonaws.com/v1.0/sites/prod-jeromes-us812431587636548/affinity/facet?userId={{data.transactions.user_id}}",
+      "method": "GET",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  ]
+}
