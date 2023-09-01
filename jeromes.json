@@ -28,9 +28,10 @@
     {
       "id": 1,
       "name": "affinity",
-      "url": "http://internal-a28503a22239d48d3b5a8bd01dc06611-1712404486.us-east-1.elb.amazonaws.com/v1.0/sites/prod-jeromes-us812431587636548/affinity/facet?userId={{data.transactions.user_id}}",
+      "url": "http://internal-a28503a22239d48d3b5a8bd01dc06611-1712404486.us-east-1.elb.amazonaws.com/v1.0/sites/prod-jeromes-us812431587636548/affinity/facet?isGlobalAffinity=true",
       "method": "GET",
       "headers": {
+        "X-API-KEY": "{{data.transactions.user_id}}",
         "Content-Type": "application/json"
       }
     }
