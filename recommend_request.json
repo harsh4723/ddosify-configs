@@ -1,0 +1,43 @@
+{
+    "count": 36,
+    "deviceType": "UNKNOWN",
+    "norm": 40,
+    "platform": "netcore",
+    "algo": "vav",
+    "algoVersion": "v2",
+    "userId": "{{data.transactions.user_id}}",
+    "pids": [
+        "MND01SLMA"
+    ],
+    "campaignId": null,
+    "filters": {
+        "componentFilters_1": {
+            "component_filters": [
+                {
+                    "field_name": "in_stock",
+                    "values": [
+                        "0"
+                    ],
+                    "condition": 2,
+                    "type": 1,
+                    "group": 1
+                }
+            ]
+        },
+        "componentFilters_2": {
+            "component_filters": [
+                {
+                    "field_name": "piece",
+                    "values": [
+                        "Pillow"
+                    ],
+                    "condition": 2,
+                    "type": 1,
+                    "group": 1
+                }
+            ]
+        }
+    },
+    "categoryPaths": null,
+    "boostedFilters": null
+}
